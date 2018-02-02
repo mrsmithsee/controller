@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/editoras', 'EditoraController@index');
+
+Route::get('/editoras/cria', 'EditoraController@cria');
+
+Route::post('/editoras', 'EditoraController@armazena');
 // API Restful (para quem for criar webservice)
 // /cursos GET -> CursoController@index listagem de cursos
 // /cursos/create Get -> CursoController@create formulario
